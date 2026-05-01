@@ -1,0 +1,29 @@
+{
+  "entities": {
+    "Order": {
+      "title": "Order",
+      "description": "A breakfast delivery order",
+      "type": "object",
+      "properties": {
+        "customerName": { "type": "string" },
+        "customerEmail": { "type": "string" },
+        "customerPhone": { "type": "string" },
+        "accommodationAddress": { "type": "string" },
+        "deliveryDate": { "type": "string" },
+        "deliveryTime": { "type": "string" },
+        "items": { "type": "array" },
+        "total": { "type": "number" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "stripeSessionId": { "type": "string" }
+      },
+      "required": ["customerName", "customerEmail", "deliveryDate", "deliveryTime", "items", "total"]
+    }
+  },
+  "firestore": {
+    "/orders/{orderId}": {
+      "schema": "Order",
+      "description": "Collection of customer orders"
+    }
+  }
+}

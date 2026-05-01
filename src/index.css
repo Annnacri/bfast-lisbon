@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", sans-serif;
+  
+  --color-primary: #FF7043; /* Warm Morning Orange */
+  --color-secondary: #5C8D89; /* Sage breakfast green */
+  --color-accent: #FFB300; /* Sunny Yellow */
+  --color-beige: #F5E6D3;
+  --color-cream: #FFFBF0; /* Warmer Cream */
+}
+
+body {
+  background-color: var(--color-cream);
+  color: #3E2723;
+  cursor: none;
+}
+
+a, button, input, textarea, [role="button"] {
+  cursor: none !important;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.premium-card {
+  @apply bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/50 transition-all duration-300 hover:shadow-[0_20px_50px_rgba(255,112,67,0.1)];
+}
+
