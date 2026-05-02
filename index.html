@@ -4,21 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Breakfast in Bed LX</title>
-    <!-- 1. O Script do Stripe tem de estar no Head para carregar cedo -->
+    <!-- Script do Stripe -->
     <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+    <style>
+      body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f9f9f9; }
+      .container { text-align: center; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+      h1 { color: #333; }
+    </style>
   </head>
   <body>
     
-    <!-- 2. O teu botão vai ficar aqui, no topo do site, para garantir que aparece -->
-    <div style="text-align: center; padding: 20px;">
+    <div class="container">
+      <h1>Breakfast in Bed LX</h1>
+      <p>Clique abaixo para fazer o seu pedido:</p>
+      
+      <!-- O TEU BOTÃO (Lembra-te de trocar os IDs abaixo) -->
       <stripe-buy-button
         buy-button-id="buy_btn_SUBSTITUIR_PELO_TEU_ID"
         publishable-key="pk_live_SUBSTITUIR_PELA_TUA_CHAVE"
       ></stripe-buy-button>
     </div>
 
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
   </body>
-</html>
+</html>.
 
