@@ -3,9 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
+    <title>Breakfast in Bed LX</title>
+    <!-- 1. O Script do Stripe tem de estar no Head para carregar cedo -->
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
   </head>
   <body>
+    
+    <!-- 2. O teu botão vai ficar aqui, no topo do site, para garantir que aparece -->
+    <div style="text-align: center; padding: 20px;">
+      <stripe-buy-button
+        buy-button-id="buy_btn_SUBSTITUIR_PELO_TEU_ID"
+        publishable-key="pk_live_SUBSTITUIR_PELA_TUA_CHAVE"
+      ></stripe-buy-button>
+    </div>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
